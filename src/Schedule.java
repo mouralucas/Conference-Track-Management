@@ -38,6 +38,8 @@ public class Schedule {
             }
 
             inputInformation.close();
+            
+            
 
         } catch (IOException e) {
             System.out.println("Schedule Not Found");

@@ -5,6 +5,7 @@
 public class TalkInformation {
     private String talkTitle;
     private int talkLength;
+    private boolean chosen;
 
     public TalkInformation(){}
     
@@ -28,6 +29,12 @@ public class TalkInformation {
     public void setTalkLength(int talkLength) {
         this.talkLength = talkLength;
     }
-    
-    
+
+    public boolean isChosen() {
+        return chosen;
+    }
+
+    public void setChosen(boolean chosen) {
+        this.chosen = chosen;
+    } 
 }
