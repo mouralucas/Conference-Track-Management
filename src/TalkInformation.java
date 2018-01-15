@@ -21,7 +21,7 @@ public class TalkInformation {
        
     /**
      * 
-     * @return 
+     * @return the title of the talk
      */
     public String getTalkTitle() {
         return talkTitle;
@@ -37,7 +37,7 @@ public class TalkInformation {
 
     /**
      * 
-     * @return 
+     * @return the length of the talk
      */
     public int getTalkLength() {
         return talkLength;
@@ -53,7 +53,7 @@ public class TalkInformation {
 
     /**
      * 
-     * @return 
+     * @return if the talk was used in a track or not
      */
     public boolean isChosen() {
         return chosen;

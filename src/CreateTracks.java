@@ -21,12 +21,19 @@ public class CreateTracks {
 
     /**
      *
-     * @param talks
+     * @param talks (list of scheduled talks)
+     * @return the number of talks that were used to create the tracks
      */
-    public void tracks(List<TalkInformation> talks) {
+    public int tracks(List<TalkInformation> talks) {
         scheduleTalks = talks;
-        fillTracks(1);
-        fillTracks(2);
+        talkCount = 0; //counts the number of talks in both tracks
+
+        //sorts the list from greater length to smallest 
+        scheduleTalks.sort(Comparator.comparing(TalkInformation::getTalkLength).reversed());
+
+        fillTracks(1);          //create track 1
+        fillTracks(2);          //create track 2
+        return talkCount;       //variable that count how many talks are in both tracks
     }
 
     /**
@@ -34,10 +41,6 @@ public class CreateTracks {
      * @param trackNumber
      */
     public void fillTracks(int trackNumber) {
-
-        //sorts the list from greater length to smallest 
-        scheduleTalks.sort(Comparator.comparing(TalkInformation::getTalkLength)/*.reversed()*/);
-
         /*The Mourning Track*/
         trackMorning = 0;
         scheduleTalks.forEach((i) -> {
@@ -45,6 +48,7 @@ public class CreateTracks {
                 track.add(i);
                 trackMorning += i.getTalkLength();
                 i.setChosen(true);
+                talkCount++;
             }
         });
 
@@ -58,6 +62,7 @@ public class CreateTracks {
                 track.add(i);
                 trackAfternoon += i.getTalkLength();
                 i.setChosen(true);
+                talkCount++;
             }
         });
 

@@ -1,10 +1,11 @@
 import java.util.List;
-
 /**
  *
  * @author Lucas Penha de Moura
  */
-public class PrintTracks {
+
+
+public class PrintTracks{
 
     private int initTime;
     private int hour;
@@ -13,8 +14,8 @@ public class PrintTracks {
 
     /**
      *
-     * @param track
-     * @param trackNumber
+     * @param track (list of talks in the track)
+     * @param trackNumber (number of the track)
      */
     public void print(List<TalkInformation> track, int trackNumber) {
         System.out.println("Track " + trackNumber + ":");

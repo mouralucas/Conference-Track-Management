@@ -25,6 +25,7 @@ public class Schedule {
         try {
             inputInformation = new BufferedReader(new FileReader(file));
 
+            /*Read all schedule file (input) and determines the length of all talks*/
             while (inputInformation.ready()) {
                 talk = inputInformation.readLine();
                 aux = talk.split(" ");
