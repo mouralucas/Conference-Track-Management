@@ -11,7 +11,6 @@ public class InitSystem {
         /*Class that opens the file with the available talks*/
         Schedule schedule = new Schedule();
         
-        
         /*Starts the traks management with the available talks and its lengths*/
         CreateTracks tracks = new CreateTracks();
         tracks.tracks(schedule.openSchedule(args[0]));
